@@ -1,0 +1,185 @@
+{
+    "name" : "动妖创作云",
+    "appid" : "__UNI__C86F2DD",
+    "description" : "逐浪CMS官方旗下:零代码建站·在线字体设计·二维码·云办公·词云·H5及更多工具",
+    "versionName" : "0.0.1",
+    "versionCode" : 100,
+    "transformPx" : false,
+    "app-plus" : {
+        // APP-VUE分包，可提APP升启动速度，2.7.12开始支持，兼容微信小程序分包方案，默认关闭
+        "optimization" : {
+            "subPackages" : true
+        },
+        "safearea" : {
+            "bottom" : {
+                "offset" : "none"
+            }
+        },
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "modules" : {
+            "OAuth" : {},
+            "Payment" : {},
+            "Share" : {},
+            "Contacts" : {}
+        },
+        "distribute" : {
+            "android" : {
+                //设置API级别为30，Google Play最低要求30
+                "targetSdkVersion" : 30,
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ]
+            },
+            "ios" : {},
+            "sdkConfigs" : {
+                "ad" : {},
+                "oauth" : {
+                    "univerify" : {},
+                    "weixin" : {
+                        "appid" : "wx56bc6c4492f37f1c",
+                        "appsecret" : "c8c4fbd74af4263ce4b8fc61f2c195d2",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "payment" : {
+                    "weixin" : {
+                        "__platform__" : [ "android" ],
+                        "appid" : "wx56bc6c4492f37f1c",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wx56bc6c4492f37f1c",
+                        "UniversalLinks" : ""
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "useOriginalMsgbox" : true
+            }
+        }
+    },
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "wx00c6c3497d53eaf0",
+        "setting" : {
+            "urlCheck" : true,
+            "es6" : false,
+            "minified" : true,
+            "postcss" : true
+        },
+        "optimization" : {
+            "subPackages" : true
+        },
+        "usingComponents" : true,
+        "permission" : {}
+    },
+    "mp-alipay" : {
+        "usingComponents" : true,
+        "component2" : true
+    },
+    "mp-qq" : {
+        "optimization" : {
+            "subPackages" : true
+        },
+        "appid" : ""
+    },
+    "mp-baidu" : {
+        "usingComponents" : true,
+        "appid" : ""
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true,
+        "appid" : ""
+    },
+    "h5" : {
+        "template" : "template.h5.html",
+        "router" : {
+            "mode" : "hash",
+            "base" : ""
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : false
+            }
+        },
+        "title" : "uView UI",
+        "devServer" : {
+            "port" : 8080,
+            "disableHostCheck" : true,
+            "proxy" : {
+                "/" : {
+                    "target" : "https://www.z01.com/",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/" : ""
+                    }
+                }
+            }
+        }
+    }
+}

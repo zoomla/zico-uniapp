@@ -1,0 +1,469 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	// "condition": { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式(list 的索引项)
+	// 	"list": [{
+	// 		"name": "test", //模式名称
+	// 		"path": "pages/componentsC/test/index", //启动页面，必选
+	// 		"query": "uuid=c4bba940-f69e-11ea-a419-6bafda9d095e&__id__=1" //启动参数，在页面的onLoad函数里面得到
+	// 	}]
+	// },
+	"pages": [{
+		"path": "pages/home/index",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+			// "navigationBarBackgroundColor": "#ffffff"
+		}
+	}, {
+		"path": "pages/home/ucenter",
+		"style": {
+			"navigationBarTitleText": "会员中心",
+			"enablePullDownRefresh": false
+		}
+	}, {
+		"path": "pages/home/create",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+	}, {
+		"path": "pages/home/live",
+		"style": {
+			"navigationBarTitleText": "官方·我们为你服务更多",
+			"enablePullDownRefresh": false
+		}
+	}, {
+		"path": "pages/home/enjoy",
+		"style": {
+			"navigationBarTitleText": "免费模板·极速启航",
+			"enablePullDownRefresh": false
+		}
+	}, {
+		"path": "pages/home/enjoy_item",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+	}, {
+		"path": "pages/home/enjoy_item_comments",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}],
+	"subPackages": [{
+			"root": "pages/member",
+			"pages": [{
+				"path": "login",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "wxauth",
+				"style": {
+					"navigationBarTitleText": "登录",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "fav",
+				"style": {
+					"navigationBarTitleText": "我的收藏",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "myorder",
+				"style": {
+					"navigationBarTitleText": "我的订单",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "money",
+				"style": {
+					"navigationBarTitleText": "资金明细",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "pay",
+				"style": {
+					"navigationBarTitleText": "支付页面",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "setting",
+				"style": {
+					"navigationBarTitleText": "个人信息设置",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "jifen",
+				"style": {
+					"navigationBarTitleText": "积分管理",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "mybiao",
+				"style": {
+					"navigationBarTitleText": "我的裱件",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "mybiao_item",
+				"style": {
+					"navigationBarTitleText": "字研社艺术品鉴真证书",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "uzhuxiao",
+				"style": {
+					"navigationBarTitleText": "注销帐户操作",
+					"enablePullDownRefresh": false
+				}
+
+			}]
+
+		},
+		{
+			"root": "pages/shop",
+			"pages": [{
+				"path": "cart",
+				"style": {
+					"navigationBarTitleText": "购物车",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "getOrder",
+				"style": {
+					"navigationBarTitleText": "订单结算",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "shop",
+				"style": {
+					"navigationBarTitleText": "字研所线上商城",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "shop_class",
+				"style": {
+					"navigationBarTitleText": "商城列表",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "shop_item",
+				"style": {
+					"navigationBarTitleText": "艺术品详情",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "renren",
+				"style": {
+					"navigationBarTitleText": "人人画",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "shopZhan",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "choose_address",
+				"style": {
+					"navigationBarTitleText": "我的地址",
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		},
+		{
+			"root": "pages/webview",
+			"pages": [{
+				"path": "z01-com",
+				"style": {
+					"navigationBarTitleText": "逐浪软件",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "zfont-list",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "sjtzj-com",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "73ic-com",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "zfont-f",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "z01-ico",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "copyright_privacy",
+				"style": {
+					"navigationBarTitleText": "隐私政策",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "copyright_server",
+				"style": {
+					"navigationBarTitleText": "服务协议",
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		},
+		{
+			"root": "pages/channel",
+			"pages": [{
+				"path": "hui",
+				"style": {
+					"navigationBarTitleText": "西江会-汇聚江右智慧",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "zhan",
+				"style": {
+					"navigationBarTitleText": "佶雅阁瘦金书法珍品展",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "biao",
+				"style": {
+					"navigationBarTitleText": "古法装裱局-字研社荣誉出品",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "edu",
+				"style": {
+					"navigationBarTitleText": "瘦金传习社",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "class",
+				"style": {
+					"navigationBarTitleText": "文章子列表",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "yuyue",
+				"style": {
+					"navigationBarTitleText": "预约参观江西字研所",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "search",
+				"style": {
+					"navigationBarTitleText": "搜索结果页",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "class_super",
+				"style": {
+					"navigationBarTitleText": "文章父栏目列表",
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		},
+		{
+			"root": "pages/vdesign",
+			"pages": [{
+				"path": "worktable",
+				"style": {
+					"navigationBarTitleText": "设计台",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "custom"
+				}
+
+			}, {
+				"path": "board",
+				"style": {
+					"navigationBarTitleText": "模板列表",
+					"enablePullDownRefresh": true,
+					"navigationStyle": "custom"
+				}
+
+			}, {
+				"path": "manage",
+				"style": {
+					"navigationBarTitleText": "资产管理",
+					"enablePullDownRefresh": true,
+					"navigationStyle": "custom"
+				}
+
+			}, {
+				"path": "prize",
+				"style": {
+					"navigationBarTitleText": "任务",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "default"
+				}
+
+			}, {
+				"path": "my_board",
+				"style": {
+					"navigationBarTitleText": "编辑模板",
+					"enablePullDownRefresh": true,
+					"navigationStyle": "default"
+				}
+
+			}, {
+				"path": "my_site",
+				"style": {
+					"navigationBarTitleText": "应用内容管理",
+					"enablePullDownRefresh": true,
+					"navigationStyle": "default"
+				}
+
+			}, {
+				"path": "message_detail",
+				"style": {
+					"navigationBarTitleText": "留言详情",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "default"
+				}
+
+			}]
+		},
+		{
+			"root": "pages/qrcode",
+			"pages": [{
+				"path": "index",
+				"style": {
+					"navigationBarTitleText": "二维码生成",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "default"
+				}
+
+			}]
+		},
+		{
+			"root": "pages/ocr",
+			"pages": [{
+				"path": "index",
+				"style": {
+					"navigationBarTitleText": "OCR文字识别",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "default"
+				}
+
+			}]
+		},
+		{
+			"root": "pages/wfont",
+			"pages": [{
+				"path": "worktable",
+				"style": {
+					"navigationBarTitleText": "在线做字",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "default"
+				}
+
+			}]
+		}
+	],
+	"preloadRule": { //分包加载
+		"pages/home/index": {
+			"network": "all",
+			"packages": ["__APP__", "pages/channel"]
+		},
+		"pages/shop/shop": {
+			"network": "all",
+			"packages": ["pages/shop"]
+		},
+		"pages/home/live": {
+			"network": "all",
+			"packages": ["pages/member"]
+		},
+		"pages/home/ucenter": {
+			"network": "all",
+			"packages": ["pages/webview"]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "动妖创作云",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF",
+		"navigationStyle": "default",
+		"app-plus": {
+			"custom": false //去掉App、H5的顶部导航
+		}
+	},
+	"tabBar": {
+		"color": "#909399",
+		"selectedColor": "#bebebf",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [{
+			"pagePath": "pages/home/index",
+			"iconPath": "static/images/foot_icon1.png",
+			"selectedIconPath": "static/images/foot_icon1_2.png",
+			"text": "云开发"
+		}, {
+			"pagePath": "pages/home/create",
+			"iconPath": "static/images/foot_icon2.png",
+			"selectedIconPath": "static/images/foot_icon2_2.png",
+			"text": "玩字库"
+		}, {
+			// 		"pagePath": "pages/home/live",
+			// 		"iconPath": "static/images/foot_icon3.png",
+			// 		"selectedIconPath": "static/images/foot_icon3_2.png",
+			// 		"text": ""
+			// }, {
+			"pagePath": "pages/home/enjoy",
+			"iconPath": "static/images/foot_icon4.png",
+			"selectedIconPath": "static/images/foot_icon4_2.png",
+			"text": "模板"
+		}, {
+			"pagePath": "pages/home/ucenter",
+			"iconPath": "static/images/foot_icon5.png",
+			"selectedIconPath": "static/images/foot_icon5_2.png",
+			"text": "会员"
+		}],
+		"midButton": {
+			"width": "100px",
+			"height": "100px",
+			"iconPath": "static/images/mid.png",
+			"iconWidth": "100px",
+			"text": ""
+		}
+	}
+}

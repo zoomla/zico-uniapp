@@ -1,0 +1,683 @@
+@charset "utf-8";
+// 引入公共基础类
+@import "uview-ui/libs/css/common.scss";
+@import "./uview-ui/libs/css/color.scss";
+
+// 非nvue的样式
+/* #ifndef APP-NVUE */
+@import "./uview-ui/libs/css/style.vue.scss";
+/* #endif */
+
+// nvue的特有样式
+/* #ifdef APP-NVUE */
+@import "./uview-ui/libs/css/style.nvue.scss";
+/* #endif */
+
+// 小程序特有的样式
+/* #ifdef MP */
+@import "./uview-ui/libs/css/style.mp.scss";
+/* #endif */
+
+// H5特有的样式
+/* #ifdef H5 */
+@import "./uview-ui/libs/css/style.h5.scss";
+/* #endif */
+
+@import "zoomlaCMS";
+$主黑色:#222327;
+$主红色:#CF423A;
+// body{background-color:$主红色;} /*主背景黑*/
+
+@font-face{font-family:'ZoomlaXingtiJ5';/*米芾草书*/
+    src: url('https://code.z01.com/font/ZoomlaXingtiJ5.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaXingtiJ5.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaXingtiJ5.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaXingtiJ5.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaXingtiJ5.svg#ZoomlaXingtiJ2') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+@font-face{font-family:'zFont1';/*逐浪经典粗黑体*/
+    src: url('https://code.z01.com/font/zFont1.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/zFont1.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/zFont1.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/zFont1.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/zFont1.svg#ZoomlaXingtiJ2') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+
+@font-face{font-family:'zFont2';/*逐浪时尚钢笔体*/
+    src: url('https://code.z01.com/font/zFont2.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/zFont2.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/zFont2.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/zFont2.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/zFont2.svg#ZoomlaXingtiJ2') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+
+@font-face{font-family:'ZoomlaXSongExtraLight';/*逐浪新宋超细体*/
+    src: url('https://code.z01.com/font/ZoomlaXSongExtraLight.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaXSongExtraLight.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaXSongExtraLight.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaXSongExtraLight.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaXSongExtraLight.svg#ZoomlaXSongExtraLight') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+
+@font-face{font-family:'ZoomlaXSongExtraLightsm';/*逐浪新宋超细体-简化版*/
+    src: url('https://code.z01.com/font/ZoomlaXSongExtraLightsm.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaXSongExtraLightsm.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaXSongExtraLightsm.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaXSongExtraLightsm.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaXSongExtraLightsm.svg#ZoomlaXSongExtraLightsm') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+	
+@font-face{font-family:'ZoomlaXiangJiao-A025';/*逐浪湘教钢笔体*/
+    src: url('https://code.z01.com/font/ZoomlaXiangJiao-A025.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaXiangJiao-A025.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaXiangJiao-A025.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaXiangJiao-A025.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaXiangJiao-A025.svg#ZoomlaXiangJiao-A025') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+@font-face{font-family:'Zoomlabaoren-A102';/*逐浪报人书法体*/
+    src: url('https://code.z01.com/font/Zoomlabaoren-A102.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/Zoomlabaoren-A102.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/Zoomlabaoren-A102.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/Zoomlabaoren-A102.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/Zoomlabaoren-A102.svg#Zoomlabaoren-A102') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+@font-face{font-family:'Zoomlayinxiangxili-A031';/*31-逐浪印象细立体*/
+    src: url('https://code.z01.com/font/Zoomlayinxiangxili-A031.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/Zoomlayinxiangxili-A031.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/Zoomlayinxiangxili-A031.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/Zoomlayinxiangxili-A031.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/Zoomlayinxiangxili-A031.svg#Zoomlayinxiangxili-A031') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+@font-face{font-family:'ZoomlaShuaisong-A028';/*35-逐浪帅宋斜楷体*/
+    src: url('https://code.z01.com/font/ZoomlaShuaisong-A028.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaShuaisong-A028.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaShuaisong-A028.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaShuaisong-A028.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaShuaisong-A028.svg#ZoomlaShuaisong-A028') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+
+@font-face{font-family:'ZoomlaMalie-A038';/*38-逐浪马列大楷体*/
+    src: url('https://code.z01.com/font/ZoomlaMalie-A038.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaMalie-A038.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaMalie-A038.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaMalie-A038.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaMalie-A038.svg#ZoomlaMalie-A038') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+@font-face{font-family:'ZoomlaCaise-A040';/*逐浪线楷彩色字*/
+    src: url('https://code.z01.com/font/ZoomlaCaise-A040?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaCaise-A040?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaCaise-A040.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaCaise-A040.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaCaise-A040.svg#ZoomlaCaise-A040') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+@font-face{font-family:'ZoomlaJinnong-A106';/*32-逐浪金农书法体*/
+    src: url('https://code.z01.com/font/ZoomlaJinnong-A106.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaJinnong-A106.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaJinnong-A106.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaJinnong-A106.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaJinnong-A106.svg#ZoomlaJinnong-A106') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+@font-face{font-family:'ZoomlaGaiShiHero-A050';/*50-逐浪盖世英雄狂草书*/
+    src: url('https://code.z01.com/font/ZoomlaGaiShiHero-A050.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaGaiShiHero-A050.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaGaiShiHero-A050.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaGaiShiHero-A050.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaGaiShiHero-A050.svg#ZoomlaGaiShiHero-A050') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+
+@font-face{font-family:'ZoomlaLingHei-A056';/*56-逐浪菱黑体*/
+    src: url('https://code.z01.com/font/ZoomlaLingHei-A056.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaLingHei-A056.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaLingHei-A056.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaLingHei-A056.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaLingHei-A056.svg#ZoomlaLingHei-A056') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+
+@font-face{font-family:'ZoomlaCarved';/*60-逐浪海棠居刻本字*/
+    src: url('https://code.z01.com/font/ZoomlaCarved.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaCarved.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaCarved.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaCarved.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaCarved.svg#ZoomlaCarved') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;
+}
+
+
+// 首页搜索
+.well_search{display: flex;align-items: center; padding: 0 10rpx;
+.u-search{padding: 0 14rpx;}
+.u-action-active{display: none;}
+.zi{font-size: 70rpx;}
+}
+
+.well_pics{width: 70rpx !important;height: 70rpx !important;border-radius: 50%;}
+
+
+// 定义中间的midButton贴底边
+uni-content, uni-tabbar .uni-tabbar__mid{align-items: flex-end;}
+
+// 自定义导航
+.navigation{position: fixed; bottom: 0;width: 100vw; height:100rpx;background:#FFF;display:flex;justify-content:center;align-items:center;border-radius:10px;z-index: 9999;border-top: 10rpx solid $主红色;
+.zi{display: block;width: 116rpx;line-height: 1; color: #551A8B;text-decoration: none;font-size:60rpx}
+}
+
+.navigation ul{position:relative;display:flex;}
+.navigation ul>view{display: flex; position:relative;list-style:none;width:70px;height:70px;z-index:1;}
+
+.navigation ul>view .mybarA{position:relative;display:flex;justify-content:center;flex-direction:column;width:100%;text-align:center;font-weight:500;}
+// .navigation ul li a .icon{position:relative;display:block;line-height:75px;font-size:1.5em;text-align:center;transition:.5s;color:#18B566;}
+.navigation .active a .icon{transform:translateY(-35px);}
+
+.navigation ul>view .mybarA .text{position:absolute;top:60rpx;width:100%;color:#F29100;font-weight:400;font-size:.75em;letter-spacing:5rpx;transition:.5s;opacity:0;transform:translateY(40rpx);}
+
+.navigation .active .mybarA{
+ .icon{margin-top: -86rpx;}
+ .text{opacity:1;transform:translateY(10px);}
+ .zi{color: #fff;}
+}
+// 球体
+.indicator{position:absolute;top:-40rpx;width:100rpx;height:100rpx;background:#29fd53;border-radius:50%;border:8rpx solid $主红色;transition:.5s;
+&::before{content:'';position:absolute;top:50%;left:-44rpx;width:40rpx;height:40rpx;border-top-right-radius:25rpx;box-shadow:0 -10rpx 0 0 $主红色;background:transparent;}
+&::after{content:'';position:absolute;top:50%;right:-44rpx;width:40rpx;height:40rpx;border-top-left-radius:25rpx;box-shadow:0 -10rpx 0 0 $主红色;background:transparent;}
+}
+.navigation ul>view:nth-child(1).active ~ .indicator{transform:translateX(calc(70px * 0));}
+.navigation ul>view:nth-child(2).active ~ .indicator{transform:translateX(calc(70px * 1));}
+.navigation ul>view:nth-child(3).active ~ .indicator{transform:translateX(calc(70px * 2));}
+.navigation ul>view:nth-child(4).active ~ .indicator{transform:translateX(calc(70px * 3));}
+.navigation ul>view:nth-child(5).active ~ .indicator{transform:translateX(calc(70px * 4));}
+
+
+.w100{width: 100%;}  //百分百宽
+.del_line{text-decoration: line-through;} //删除线
+.mr_10rpx{margin-right: 10rpx;}
+
+// 首页搜索
+.home_search{position: absolute;top:0;left: 3%; width: 94%;  z-index: 6;}
+
+.well_listBox{margin-top:-120rpx;margin-left: 30rpx;margin-right: 30rpx;text-align: center;color: #fff;}
+.well_list1{display: flex;justify-content: center;align-items: center; margin-bottom: 30rpx; height:380rpx; background: #6a77e9;border-radius: 20rpx;
+h1{padding-right: 10rpx; font-weight: 100;}
+}
+
+.well_list2{@extend .well_list1;background: #8891ee;}
+.well_list3{@extend .well_list1;background: #ed6b6b;}
+.well_list4{@extend .well_list1;background: #9999ff;}
+.well_list5{@extend .well_list1;background: #7e7e7e;}
+.well_list6{@extend .well_list1;background: #18B566;}
+
+// 首页平行两小块
+.index_well{@include dflex;flex-wrap: wrap; justify-content:space-around;padding:0 20rpx; font-size: 34rpx;
+&>view{margin-bottom: 10rpx;display: flex; align-items: center;justify-content: center; width:45vw;height: 160rpx;border-radius: 15rpx;color: #3d666c;}
+&>view:nth-child(1){background: rgba(50,58,59,.28);}
+&>view:nth-child(2){background: rgba(50,58,59,.38);}
+&>view:nth-child(3){background: $主红色;}
+&>view:nth-child(4){background: $主红色;}
+strong{font-weight: 100;}
+span{display: block; font-size: 22rpx;}
+}
+
+// .index_well_l{display: flex; align-items: center;justify-content: center; width:48vw;height: 160rpx;background: #76dcc4;border-radius: 15rpx;color: #3d666c;}
+// .index_well_r{display: flex; align-items: center;justify-content: center;width:48vw;height: 160rpx;background: #8d96fd;border-radius: 15rpx;color: #454a84;}
+.index_well_icon{margin-right: 20rpx; 
+i{font-size:60rpx;  color :rgba(255,255,255,.5);}
+}
+
+.index_about{ margin-top: 10rpx;margin-bottom: 100rpx; padding: 40rpx;text-align: center;
+view:first-child{font-weight: bold;font-size: 29rpx;}
+p{@include 段落文本对齐处理;margin-top: 10rpx; text-indent: 60rpx;opacity: .6;}
+}
+
+.index_more{background-color: $主红色 !important; 
+button{background-color: #000000 !important;}//兼容小程序
+}
+
+// 首页列表
+.index_listBox{padding:0 30rpx;}
+.index_list{display: flex;align-items: center;align-content: center;  justify-content: space-between;height: 160rpx;overflow: hidden;}
+.index_list_pic{width: 35%;height: 150rpx; overflow: hidden;
+img{width: 100%;border-radius: 16rpx;}
+}
+
+.index_list_txt{width: 62%;color: rgba(255,255,255,0.35);}
+.index_list_txtTitle{margin-bottom:10rpx;font-size:28rpx; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;color: rgba(255,255,255,0.5);}
+
+// 造字列表页
+.create_hero { display: block;position: absolute; flex-direction: column;justify-content: center;align-items: center;    
+    width: 100%;height: 10vh; box-sizing: border-box; transform: skewY(8deg);transform-origin: 100% center 0px;
+    padding: 48px 48px 32px;background: #ccc; overflow: hidden;
+}
+	
+.create_0{height: 12vh;}
+
+.create_about{position: absolute; z-index: 1; top: 30rpx;right: 40rpx;
+.zi{display: initial; padding-right: 10rpx;}
+}
+
+.create_more{
+button{background: $u-main-color !important;}
+}
+
+.create_list{
+&>view{margin:20rpx;margin-top:10rpx;padding-top: 120rpx;height:350rpx;background:rgba(105,119,235,1); border-radius:6px; color:#ffffff; text-align:center;font-size:72rpx;}
+small{display:block; font-size: 24rpx;}	
+&>view:nth-child(1){background:rgba(105,119,235,1);}
+&>view:nth-child(2){background:rgba(105,119,235,0.8);}
+&>view:nth-child(3){background:rgba(237,107,102,1);}
+&>view:nth-child(4){background:rgba(124,125,127,1);}
+&>view:nth-child(5){background:#DA0007;}
+&>view:nth-child(6){background:rgb(254,170,0);}
+&>view:nth-child(7){background:rgba(254,170,0,.6);}
+&>view:nth-child(8){background:rgba(254,170,0,.26);}
+}
+
+.create_more{margin:20rpx;}
+
+// 发现列表页
+.live_list_box{display: flex;flex-wrap: wrap;justify-content:space-around; padding: 10rpx;padding-top: 100rpx;
+.live_list:nth-child(2){background: #9c869b;}
+.live_list:nth-child(3){background: #b08e8d;}
+.live_list:nth-child(4){background: #7f7087;}
+.live_list:nth-child(5){background: #b19499;}
+.live_list:nth-child(6){background: #846b7e;}
+.live_list:nth-child(7){background: #519ad1;}
+.live_list:nth-child(8){background: #60b88e;}
+.live_list:nth-child(9){background: #d07b42;}
+.live_list:nth-child(10){background: #d2a8b4;}
+}
+
+.live_list{padding-top: 30rpx;margin-bottom: 40rpx; width: 46%;height: 380rpx;  text-align: center;border-radius: 10rpx;background: #809996;
+img{ display: inline-block; width:80%;height: 300rpx;}
+view{display: block;}
+}
+
+.live_more_title{font-size: 32rpx;font-family:$苹方极细字体; font-weight: 100;text-indent: 30rpx;opacity: .6;}
+.live_more{padding: 10rpx;@include dflex;flex-wrap: wrap;justify-content:space-around;margin-bottom: 20rpx;
+.live_more_list:nth-child(1) i{color: #60b88e;}
+.live_more_list:nth-child(2) i{color: #547088;}
+.live_more_list:nth-child(3) i{color: #ad8ed2;}
+.live_more_list:nth-child(4) i{color: #d07b42;}
+.live_more_list:nth-child(5) i{color: #d0728c;}
+.live_more_list:nth-child(6) i{color: #d2a8b4;}
+i{display: block;}
+}
+
+.live_more_list{margin-top: 20rpx; width: 30%;height:200rpx; border-radius: 10rpx;background: #18171c;text-align: center;
+i{padding-top: 38rpx; font-size:80rpx;}
+}
+
+// 瘦金列表
+.enjoy_list{
+&>view{padding:40rpx; border-top: 20rpx solid #eee;}
+.u-cell{padding-left: 0 !important; padding-right: 0 !important;}
+.u-cell_title{ width: 90vw !important; white-space:nowrap;text-overflow:ellipsis;overflow: hidden;}
+
+}
+
+
+.enjoy_list_title{@include 多行文字省略号;-webkit-line-clamp: 2; font-size:34rpx;color: #434343;}
+.enjoy_list_sys{margin: 12rpx 0 ; color: #ABABAB;@include 多行文字省略号;-webkit-line-clamp: 2; }
+.enjoy_list_pic{@include dflex;height:300rpx;overflow: hidden;
+image{width: 100%;height: 100%;}
+}
+
+// 会员中心
+.ucenter_info{position: relative; height: 400rpx; padding: 80rpx 40rpx; color: #000;font-size: 38rpx;font-weight: bold; z-index: 1;
+background: #1496f1;}
+.ucenter_infoBox{display: flex; align-items: center;justify-content:space-between;
+// border-bottom-left-radius: 150px/30px 30px 0rpx 0rpx;
+// border-bottom-left-radius: 20%;border-bottom-right-radius: 20%;
+image{display: block;margin-right: 20rpx; width: 150rpx;height: 150rpx;border-radius: 50%;}	
+button{opacity: .4;}
+}
+
+// 会员中心的弧形
+.ucenter_infoAfter { width:140%; height:100px; position:absolute; left:-20%; bottom:-50rpx; z-index:-1; border-radius:0 0 50% 50%; background:#1496f1;}
+
+// 资金明细
+.ucenter_money{font-size: 24rpx;color: #eee;
+text{padding-right: 10rpx;}
+button{margin-right: 5rpx; padding-left: 10rpx;padding-right: 10rpx;font-size: 22rpx;}
+}
+
+.ucenter_infoLeft{display: flex;align-items: center; font-weight: 100;}
+.ucenter_infoR{display: flex;align-items: center;margin-top: 36rpx;
+button{border: none !important;padding:0;}
+u-icon{font-size: 36rpx;}
+.u-icon--right{margin-left: 10rpx;opacity: .6;}
+}
+
+// 开通会员浮动
+.ucenter_open{display: flex;align-items: center;align-content: center;justify-content: space-around; margin-top: 30rpx; width: 90%;height: 120rpx;background: #ccc;border-radius: 16rpx;color: #333;}
+
+.ucenter_open_sys{padding-left: 60rpx;
+view:nth-child(1){font-size: 32rpx;font-weight: bold;}
+view:nth-child(2){font-size: 22rpx;opacity: .8;}
+}
+
+.ucenter_box{display: flex;flex-wrap: wrap; align-items:flex-start;justify-content: center;  padding-top: 10rpx;padding-bottom:100rpx;
+// .u-cell-box{width: 90vw !important;}
+// .u-cell-item-box{background:rgba(24,23,28,1)!important;}
+.u-border-bottom:after{border-top:1rpx solid #ccc;}
+
+}
+.ucenter_box_4{display: flex;justify-content:center; margin-top: 40rpx; width: 90vw; height:260rpx;
+.ucenter_box_4list:nth-child(2) view{background: #C0C4CC;}
+.ucenter_box_4list:nth-child(3) view{background: #C0C4CC;}
+.ucenter_box_4list:nth-child(4) view{background: #9C9C9C;}
+
+}
+
+.ucenter_box_4list{display: flex;flex-wrap: wrap;justify-content:center; align-items: center; align-content: center; width: 25%;
+view{display: inline-block;margin-bottom: 12rpx; background: #ccc;color: #fff; width:130rpx;height: 130rpx;line-height: 130rpx; border-radius: 50%;text-align: center;font-size: 60rpx;}
+}
+
+// .ucenter_login{display: flex;align-items: center ;align-content: center;justify-content: center; font-weight: 100;}
+
+.ucenter_loginOut{display: initial;margin-top: 10rpx; width:90vw; }
+
+.ucenter_copyright{padding-top:40rpx; text-align: center;font-size: 24rpx;opacity: .42;
+text{border-bottom: 1px solid #CCCCCC;}
+}
+
+// enjob_item 首个标准内容页定义
+.enjoy_item{padding: 40rpx;margin-bottom: 100rpx;}
+.enjoy_item_h1{padding: 30rpx 0; font-size: 44rpx;text-align: center; }
+.enjoy_item_about{color: #666; text-align: center;}
+.enjoy_item_con{@include 段落文本对齐处理; margin-top:28rpx;font-size: 30rpx;min-height: 40vh;
+text{display: inline-block; padding-top:10rpx;}
+._h1{margin-top:20rpx; font-size:42rpx;}
+._img{margin-top: 30rpx;}
+}
+.enjoy_item_any{display:flex;align-items: center; align-content: center;flex-wrap: wrap; justify-content:center; margin:5rpx;margin-top: 40rpx;   height: 400rpx;background:url('https://www.sjtzj.com/UploadFiles/Images/weixin/20210621.jpg?id=1') center no-repeat /*#202020*/; background-size:cover; text-align:center;border-radius: 20rpx;;color: rgba(0,0,0,.68);
+ text{font-size: 64rpx;font-weight: 100}
+ }
+ .enjoy_item_con_btn{display: flex; margin-top: 10rpx;opacity: .68;
+ .u-btn{padding-left: 28rpx !important;padding-right: 28rpx !important;}
+ // 以下为兼容UNI-H5
+ uni-button{background-color:transparent !important;} //(background-color:transparent;) transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值。
+ uni-button:nth-child(1){border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
+ uni-button:nth-child(1)::after{border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
+ uni-button:nth-child(2){border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}
+ uni-button:nth-child(2)::after{border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}
+ // 以下为兼容微信
+button{background-color:transparent !important;} //(background-color:transparent;) transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值。
+button:nth-child(1){border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
+u-button:nth-child(1) button::after{border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
+u-button:nth-child(2) button{border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}
+u-button:nth-child(2) button::after{border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}
+ 
+ }
+ 
+ 
+ 
+ // 西江会
+.hui_index{
+uni-image,.swiper-item_img{width: 100%;}
+.swiper-box{height: 360rpx;}	 
+ }
+ 
+ .hui_swiper_txt{@include 文字白影二; position: absolute;z-index: 1;bottom: 10rpx;color: #fff; }
+ 
+ .hui_listBox{@extend .index_listBox;margin-top: 20rpx;
+ .index_list_pic img{border-radius: 0;}
+ .index_list_txtTitle{color: #000;}
+ .index_list{margin-top: 20rpx;padding: 40rpx 20rpx;height: 210rpx; background: #fff;}
+ }
+ 
+ //装裱局
+ .biao{padding-bottom: 40rpx;
+ .enjoy_item_any{margin-left: 20rpx;margin-right: 20rpx;}
+ }
+ 
+ .biao_well{display: flex;flex-direction:column; align-items: center;align-content: center ; height: 100vh; color: #fff; justify-content: center; text-align: center;
+ background: -webkit-linear-gradient(#848FA3,#10141D);
+ 	background: -o-linear-gradient(#848FA3,#10141D);
+ 	background: -moz-linear-gradient(#848FA3,#10141D);
+ 	background: -mos-linear-gradient(#848FA3,#10141D);
+ 	background: linear-gradient(#848FA3,#10141D);
+	}
+	
+.biao_well_title{display: block; font-size: 60rpx;font-weight: bold;font-family:'ZoomlaCarved';}
+.biao_well_author{opacity: .6;padding-top: 30rpx; text-indent:160rpx;}
+.biao_well_more{position: absolute; bottom: 50rpx;font-size: 80rpx;color: #eee;}
+
+.biao_con{padding: 20rpx;
+.u-grid-item{background: none !important;color: #5F636B;}
+.u-btn{font-size:42rpx !important;font-weight: bold;}
+.zi{margin-right: 20rpx;font-size: 62rpx;}
+}
+	
+.biao_con_title{margin-top: 30rpx;line-height: 60rpx; font-family:'ZoomlaCarved'; font-size: 30rpx;color: #333;background: #e4e7ed;text-align: center;font-weight: bold;letter-spacing:100rpx;text-indent:100rpx;
+border-top:1px solid #e4e7ed;	 
+border-left:1px solid #e4e7ed;	 
+border-right:1px solid #e4e7ed;	 
+}
+
+// 装裱知识
+.biao_know{padding: 20rpx;
+.u-grid-item-box{align-items: flex-start !important; text-indent: 20rpx;}
+.u-grid-item-box view{padding-right: 10rpx;height: 36rpx; overflow: hidden;}
+}
+
+.biao_know_title{@extend .biao_con_title;}
+
+
+//线上商城
+.shop_list{margin-bottom: 20rpx;
+image{max-height: 140rpx;margin-top: 90rpx;margin-bottom: 90rpx; }
+text{ line-height: 80rpx; color: #f00;;}
+}
+
+.shop_list_title{@include dflex;justify-content:space-around; padding:28rpx 80rpx;background: #fff;font-size: 34rpx;
+view .zi{margin-right: 10rpx;color: #000;}
+.zi{display: inline-block;margin-left: auto;color: #ccc;}
+}
+
+//商品子类别页
+.shop_class{margin-top: 20rpx; display:flex; justify-content: space-around; flex-wrap:wrap;}
+.shop_class_list{position: relative; margin-bottom: 20rpx; height:460rpx;width:48%; background:#fff;}
+.shop_class_list:nth-child(odd){margin-right: 1%;}  //单数
+.shop_class_list:nth-child(even){margin-left: 1%;}  //双数
+.shop_class_list_img{height:280rpx; overflow: hidden;}
+.shop_class_list_title{margin-top: 10rpx; padding-left: 15rpx; padding-right: 15rpx; font-size: 28rpx; color: #515151; height:72rpx; letter-spacing:1rpx;}
+
+.shop_class_list_price {display:flex; justify-content: space-between; margin-top: 30rpx; padding-left: 15rpx; padding-right: 15rpx;}
+.shop_class_list_price1 {font-weight: 700;font-size: 25rpx;color: $u-type-error;}
+.shop_class_list_price1_j{display:inline; margin-left: 8rpx; color:#ff1929; font-size: 35rpx;}
+.shop_class_list_price2 { width: 30rpx; height: 30rpx; margin-top: 8rpx; margin-right: 20rpx;
+// i{color:#f00; opacity: 0.7; font-size:35rpx;}
+}
+
+.shop_item_con{padding: 20rpx;
+&>view{padding:10rpx 20rpx;}
+}
+
+.detail_duction{margin-bottom: 100rpx;
+rich-text	img{max-width: 92%;}
+image{max-width: 92%;}
+}
+
+// 预约参观
+.yuyue{@include  dflex;padding:20rpx; height: 100vh;
+.w100{z-index: 1;}
+.u-form-item{color: #fff !important;}
+button{margin-top: 10rpx;}
+}
+
+//使用filter:blur(3px)使背景模糊
+.yuyue_bg{background: url(//www.sjtzj.com/UploadFiles/Images/weixin/yuyue.jpg) top center no-repeat; background-size: cover;filter:blur(3px);position: fixed;top:0;left:0;width:100%;height: 100vh;z-index: 1;}
+.yuyue_title{text-align: center; font-size: 58rpx;font-weight: 100;color: #fff;}
+.yuyue_abbr{text-align: center;color: #fff;}
+
+//购物车下方bar
+.detail_buy{position: fixed;display: flex;  width:100%;left: 0; bottom: 0; z-index: 999;
+i{ display: inline-block;padding-right: 10rpx;}
+}
+.detail_buy_i_img{margin-right: 10rpx;}
+.detail_buy_m,.detail_buy_j{color:#fff; height:85rpx; line-height: 85rpx; width: 100%; text-align: center;}
+.detail_buy_i{background: #ddd; color:#515151; width: 100%; display: flex;align-content: center;justify-content: center;align-items: center;}
+.detail_buy_m{background:$u-main-color;}
+.detail_buy_j{background:$u-content-color;}
+
+// 微信会员登录
+.mp-login{padding:20rpx;}
+.mp-login-btn{
+button{background: $u-main-color !important;}
+}
+
+.mp-logo{@include dflex; margin-bottom: 20rpx;
+image{width:300rpx;}
+}
+
+//订单结算页
+.sett_top{height:250rpx;background: $u-main-color;}
+.sett_top_t{color:#fff; padding-top: 40rpx; text-align: center; font-size: 33rpx; font-weight: 600; letter-spacing:2rpx;}
+.sett_top_add{margin-top: 30rpx;padding:0 150rpx; text-align: center; color:#fff; line-height: 40rpx; font-size: 28rpx;}
+.sett_con{background:#fff; margin:25rpx 15rpx; padding:30rpx 30rpx; border-radius: 15rpx;}
+.sett_con_top{margin-bottom: 30rpx; text-align: center;font-size: 30rpx; color:#2e2e2e; font-weight: bold; letter-spacing:2rpx;}
+
+.sett_con_list{display:flex; margin-top: 10rpx; padding:25rpx 0; border-bottom: solid 1rpx #F3F3F3;}
+.sett_con_list_title{width:75%;font-size: 27rpx; letter-spacing:1rpx;}
+.sett_con_list_quantity{width:11%; font-size: 21rpx; text-align: center;}
+.sett_con_list_quantity1{display:inline; margin-left: 2rpx;font-size: 26rpx;}
+.sett_con_list_price{width:14%; font-size: 21rpx; text-align: center;}
+.sett_con_list_price1{display:inline;font-size: 26rpx;}
+
+.sett_con_list:last-child{border-bottom: solid 5rpx #F3F3F3;}
+
+.sett_payment{position: fixed; display:flex; width:100%; bottom:0;
+view{height:110rpx; line-height: 110rpx;}
+}
+.sett_payment_left{width:70%; padding-left: 30rpx; background: #fff;}
+.sett_payment_price{display:inline; margin-left: 10rpx; color:#f00; font-size: 28rpx;}
+.sett_payment_price1{display:inline; font-size: 35rpx; font-weight: 600;}
+
+.sett_payment_right{@include dflex; width:30%; background: $u-main-color; color:#fff; font-weight: 600;}
+
+.sett_con_envelope{margin-top: 30rpx; color:#f00;}
+
+// 我的装裱
+.mybiao{min-height: 100vh; background: rgba(50,50,50,.1);}
+.mybiao_top{display: flex;align-items: center;justify-content: center; min-height: 350rpx; background: url(//www.sjtzj.com/UploadFiles/Images/weixin/mybaio_top.jpg) top center no-repeat;background-size: cover; color: #ccc;font-size: 40rpx;
+text{opacity: .5;font-family: $苹方极细字体;font-weight: 100;}
+}
+// 我的装裱浮动
+.mybiao_fu{position: absolute;left:2vw; margin-top: -40px;padding-top: 30rpx;  background: rgba($color: #ffffff, $alpha: .4); height: 220rpx;width: 96vw;border-top-left-radius: 20rpx;border-top-right-radius: 20rpx; text-align: center;
+.u-col-6{text-align: center !important;}
+u-icon{display: inherit;}
+}
+// 我的装裱列表
+.mybiao_list{margin-top: 160rpx;width: 96vw;margin-left: 2vw;}
+.mybiao_listItem{display:flex; padding:20rpx; margin-top: 10rpx;background: rgba(255,255,255,.7);border-radius: 14rpx;
+}
+.mybiao_listItem_r{margin-left: 20rpx;width: calc(100vw - 200rpx );
+text{display: block;margin-top: 5rpx; color: #ccc;font-size: 24rpx;}
+.zi{margin-left: 10rpx;margin-right: 5rpx;}
+}
+
+.mybiao_item{padding:0 10rpx;}
+.mybiao_itemTit{font-size: 32rpx;font-weight: bold; line-height: 68rpx;}
+.mybiao_item_con{@include 段落文本对齐处理; margin-top:28rpx;font-size: 30rpx;min-height:8vh;
+// text{display: inline-block; padding-top:10rpx;}
+// ._h1{margin-top:20rpx; font-size:42rpx;}
+// ._img{display: none;}
+image{display: none;}
+video{display: block;margin-top: 10rpx; width: 96.5vw !important;}
+}
+
+.mibao_itemPic{margin-top: 30rpx; padding-bottom:5.6vh;}
+
+// 我的装裱下方按钮
+.mybiao_itemDi{position: fixed;left: 0;bottom: 0;display: flex;
+.zi{margin-right: 10rpx;}
+u-button{width: 50vw;}
+u-button button{border-radius: 0;}
+}
+
+// 佶雅阁商品展
+// .shopZhan_top{@extend .mybiao_top;background-image: url(//www.sjtzj.com/UploadFiles/Images/weixin/shop_zhan.jpg?id=1);}
+.shopZhan{min-height: 100vh;  background:url(//www.sjtzj.com/UploadFiles/Images/weixin/shop_zhan2.jpg)  #0B0706 top center no-repeat;background-size:auto 800rpx; color: #a3a3a3;	}
+.shopZhan_top{padding: 30rpx;
+view:nth-child(1) {margin-top: 100rpx;margin-bottom: 10rpx;font-size: 38rpx;font-weight: bold;color: #fff;
+	.zi{margin-right: 10rpx; color: #FEC100;display: inline-block;}	
+	}
+text{ padding: 20rpx; color: #ccc;}	
+}
+
+.shopZhan_list{display: flex;flex-wrap:wrap;justify-content:space-between; padding: 40rpx;
+// .shopZhan_list_item:nth-child(1) .shopZhan_list_itemBox{background-color: #000;}
+// .shopZhan_list_item:nth-child(2) .shopZhan_list_itemBox{background-color: #000;}
+}
+
+.shopZhan_list_item{margin-top: 20px; width:46%;text-align: center;
+text{display: inline-block; padding-top: 20rpx;}
+}
+
+.shopZhan_list_itemBox{display: flex;align-items: center; background: #fff;height: 400rpx;border-radius: 20rpx;
+image{max-width: 100%;max-height: 80%;}
+}
+
+.detail_duction{
+text:nth-child(1){font-weight: bold;line-height: 60rpx;font-size: 32rpx}
+}
+
+.detail_ductionPic{overflow: hidden;margin-right: 20rpx; margin-bottom: 80rpx;}
+
+//人人画
+.renren{text-align: center;padding-top: 20vh;
+.zi{ font-size: 300rpx;}
+}
+
+.money_list{text-align: center;}
+
+
+
+/* VD模块 */
+.vd_page{display:flex; flex-flow:column;}
+.vd_page_head{margin-bottom:30rpx; padding:70rpx 80rpx;}
+.vd_page_title{margin-bottom:6rpx; font-size:56rpx; font-weight:400;}
+.vd_page_title2{color:#495057;}
+.vd_page_main{padding:0 26rpx;}
+.vd_page_image{display:block;text-align:center;position:relative;cursor:pointer}
+.vd_page_image::after{content:"点击更换图片";display:flex;justify-content:center;align-items:center;width:100%;height:100%;position:absolute;top:0;left:0;border:2rpx dashed #dee2e6;}
+.vd_page_image.disable{cursor:auto}
+.vd_page_image.disable::after{display:none}
+.vd_page_image_content{width:100%; height:100%; background-repeat:no-repeat; background-size:100% auto; background-position:50% 50%;}
+.vd_list_adder{padding:14rpx 0; margin:30rpx 0; text-align:center; font-size:32rpx; color:#767a82; border:2rpx dashed #dee2e6;}
+
+.form-item{display:flex; align-items:center; padding:16rpx 0; border-bottom:2rpx solid #e9ecef;}
+.form-item:last-child{border-bottom:0;}
+.form-require>.form-label::before{content:"*"; flex-shrink:0; display:inline-block; margin-right:4rpx; color:#f00;}
+.form-label{flex-shrink:0; display:flex; width:120rpx; color:#6c757d;}
+.form-label-append{margin-left:auto; color:#333;}
+.form-label-append-del{color:#e45656;}
+.form-item-lg>.form-label{align-self:flex-start; padding-top:10rpx;}
+.form-control{width:100%; font-size:34rpx;}
+.form-item-list{font-size:28rpx;}
+.form-item-list-item{padding:10rpx 14rpx; margin-bottom:22rpx; border:2rpx solid #e9ecef; border-radius:8rpx;}
+.form-item-list-item-del{padding:6rpx 0 12rpx 0; color:#e45656; font-size:26rpx; border-bottom:2rpx solid #e9ecef;}
+.form-btn{width:100%; padding:20rpx 26rpx; margin:20rpx 0; background:#f4f4f5; color:#232323; text-align:center; border-radius:8rpx;}
+.form-btn.disable{opacity:.5;}
+.form-btn-ok{background:#3c9cff; color:#fff;}
+.form-btn-cancel{}
+.form-btn-warn{background:#ffc107;}
+.form-btn-err{background:#fa3534; color:#fff;}
+.form-item.form-item-row{display:block; margin-bottom:8rpx;}
+.form-item.form-item-row>.form-label{width:100%; margin-bottom:12rpx;}
+
+.popup_nobg .u-drawer-content{background:transparent !important;}
+.popup_nobg{z-index:300 !important;}
+
